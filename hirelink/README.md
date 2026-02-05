@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# HireLink - Job Application & Recruitment Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive React application enabling candidates to apply for jobs and recruiters to manage the hiring pipeline.
 
-Currently, two official plugins are available:
+## 🚀 How to Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+2.  **Start the Development Server:**
+    ```bash
+    npm run dev
+    ```
+3.  **Open in Browser:**
+    Navigate to `http://localhost:5173`
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Framework:** React + TypeScript (Vite)
+* **UI Library:** Material UI (MUI) v5
+* **State Management:** Zustand (with LocalStorage persistence)
+* **Routing:** React Router DOM
+* **Forms:** React Hook Form
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Candidate View
+* View available job listings.
+* **Multi-Step Application Form:**
+    * Step 1: Personal Information (Validation included)
+    * Step 2: Experience & Skills
+    * Step 3: Review Application before submitting.
+* **Success Feedback:** uniquely generated Application ID.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Recruiter View (`/admin`)
+* **Kanban Board:** Visual pipeline of all candidates sorted by status.
+* **Review Modal:**
+    * View candidate details and "Mock Resume".
+    * Rate candidates (1-5 stars) and add internal notes.
+    * Schedule Interviews.
+    * Move candidates through stages (Interview -> Offer -> Rejected).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 Assumptions
+* Data is persisted using `localStorage` to simulate a backend database.
+* Authentication is skipped for simplicity (Recruiter view is accessible via the "Recruiter View" button).
