@@ -7,10 +7,8 @@ export default function Header() {
     <AppBar position="static" color="default" elevation={1}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          {/* LOGO ICON */}
           <WorkIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'primary.main' }} />
           
-          {/* LOGO TEXT */}
           <Typography
             variant="h6"
             noWrap
@@ -30,7 +28,6 @@ export default function Header() {
             HIRELINK
           </Typography>
 
-          {/* NAVIGATION BUTTONS */}
           <Box sx={{ display: 'flex', gap: 2 }}>
             <Button component={Link} to="/" color="inherit">
               Candidate View

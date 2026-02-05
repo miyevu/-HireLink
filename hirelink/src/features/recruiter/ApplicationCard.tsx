@@ -1,7 +1,6 @@
 import { Card, CardContent, Typography, Box, Chip, Divider } from '@mui/material';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import { getJobTitle } from '../../data/mockJobs'; 
-
 import type { JobApplication } from './recruiterTypes';
 
 interface ApplicationCardProps {

@@ -4,7 +4,6 @@ export const JOBS = [
   { id: '3', title: 'Product Manager', company: 'Innovate Inc', date: 5, location: 'Spintex', salary: '$140k - $180k', type: 'Contract' },
 ];
 
-// Helper to get title by ID quickly
 export const getJobTitle = (id: string) => {
   const job = JOBS.find(j => j.id === id);
   return job ? job.title : 'Unknown Role';

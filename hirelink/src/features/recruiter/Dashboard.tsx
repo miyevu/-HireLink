@@ -16,12 +16,10 @@ const COLUMNS: { id: ApplicationStatus; label: string }[] = [
 export default function RecruiterDashboard() {
   const applications = useStore((state) => state.applications);
   
-  // ✅ USE THE NEW NAME
   const [selectedApp, setSelectedApp] = useState<JobApplication | null>(null);
 
   const getAppsByStatus = (status: string) => {
     if (!applications) return [];
-    // ✅ CAST AS JobApplication[]
     return applications.filter((app: any) => app.status === status) as JobApplication[];
   };
 

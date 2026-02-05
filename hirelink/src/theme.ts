@@ -3,30 +3,30 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#4F46E5', // Indigo-600: A modern, trustworthy blue-purple
+      main: '#4F46E5',
       light: '#818CF8',
       dark: '#3730A3',
     },
     secondary: {
-      main: '#10B981', // Emerald-500: Fresh green for success states
+      main: '#10B981', 
     },
     background: {
-      default: '#F3F4F6', // Light gray background (not harsh white)
+      default: '#F3F4F6', 
       paper: '#FFFFFF',
     },
     text: {
-      primary: '#111827', // Gray-900: Softer than pure black
-      secondary: '#6B7280', // Gray-500
+      primary: '#111827', 
+      secondary: '#6B7280', 
     },
   },
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h4: { fontWeight: 700, letterSpacing: '-0.02em' },
     h6: { fontWeight: 600 },
-    button: { textTransform: 'none', fontWeight: 600 }, // No ALL CAPS buttons
+    button: { textTransform: 'none', fontWeight: 600 },
   },
   shape: {
-    borderRadius: 12, // More rounded corners
+    borderRadius: 12,
   },
   components: {
     MuiButton: {
@@ -38,13 +38,13 @@ export const theme = createTheme({
           '&:hover': { boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' },
         },
         containedPrimary: {
-          background: 'linear-gradient(45deg, #4F46E5 30%, #6366F1 90%)', // subtle gradient
+          background: 'linear-gradient(45deg, #4F46E5 30%, #6366F1 90%)', 
         },
       },
     },
     MuiPaper: {
       styleOverrides: {
-        root: { backgroundImage: 'none' }, // Fixes dark mode weirdness if enabled
+        root: { backgroundImage: 'none' }, 
         elevation1: { boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)' },
         elevation3: { boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' },
       },

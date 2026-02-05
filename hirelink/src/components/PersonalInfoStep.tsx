@@ -1,7 +1,6 @@
 import { Grid, TextField } from '@mui/material';
 import { useFormContext, Controller } from 'react-hook-form';
 
-// ✅ NOTICE THE 'export default' HERE
 export default function PersonalInfoStep() {
   const { control, formState: { errors } } = useFormContext();
 

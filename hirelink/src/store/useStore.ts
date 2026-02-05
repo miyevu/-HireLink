@@ -1,8 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-// --- DEFINITIONS (Moved here to fix the error) ---
-
 export type ApplicationStatus = 'applied' | 'reviewed' | 'interview_scheduled' | 'offer_sent' | 'rejected';
 
 export interface Job {
@@ -30,7 +28,7 @@ export interface Review {
 }
 
 export interface Application {
-  id: string; // Unique ID
+  id: string;
   jobId: string;
   candidate: Candidate;
   status: ApplicationStatus;
@@ -39,20 +37,17 @@ export interface Application {
   interviewDate?: string; 
 }
 
-// --- STORE LOGIC ---
 
 interface AppState {
   jobs: Job[];
   applications: Application[];
   
-  // Actions
   addApplication: (application: Application) => void;
   updateStatus: (appId: string, status: ApplicationStatus) => void;
   addReview: (appId: string, review: Review) => void;
   scheduleInterview: (appId: string, date: string) => void;
 }
 
-// Mock Data
 const MOCK_JOBS: Job[] = [
   {
     id: '1',

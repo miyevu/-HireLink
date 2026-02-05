@@ -10,7 +10,6 @@ import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { useStore } from '../../store/useStore';
 import { getJobTitle } from '../../data/mockJobs'; 
-
 import type { JobApplication } from './recruiterTypes'; 
 
 interface InternalReviewModalProps {
@@ -46,7 +45,6 @@ export default function InternalReviewModal({ app, onClose }: InternalReviewModa
     }
   };
 
-  // ✅ FIXED: Removed the alert() popup. Now it just updates and closes.
   const handleFinalSendOffer = () => {
     updateStatus(app.id, 'offer_sent');
     onClose(); 

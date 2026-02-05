@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import BusinessIcon from '@mui/icons-material/Business';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-// Define the shape of the data this component expects
 interface JobCardProps {
   id: string;
   title: string;
